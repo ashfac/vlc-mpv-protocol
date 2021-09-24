@@ -5,4 +5,4 @@ if [[ ! $url =~ ^https?:// ]]; then
   echo "protocol not allowed"
   exit 1
 fi
-vlc --open "$url"
+vlc -f --open "$url"
