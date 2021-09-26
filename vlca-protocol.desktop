@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=VLC protocol
+Comment=Open vlca:// links with VLC Player.
+Exec=vlca-protocol %u
+TryExec=vlca-protocol
+Icon=vlc
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/vlca;
+NoDisplay=true

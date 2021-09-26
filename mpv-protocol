@@ -2,4 +2,4 @@
 
 url=$( echo "https://www.youtube.com/watch?v=${1##*=}" )
 
-mpv --fs --ytdl-format="bestvideo[ext!=webm][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" "${url}"
+mpv --fs --ytdl-format="bestvideo[ext!=webm][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" ${url}

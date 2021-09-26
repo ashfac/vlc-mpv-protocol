@@ -2,4 +2,4 @@
 
 url=$( echo "https://www.youtube.com/watch?v=${1##*=}" )
 
-vlc -f --open "$url"
+vlc -f ${url}
