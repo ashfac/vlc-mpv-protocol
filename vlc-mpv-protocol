@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# extract protocol, e.g. vlc, vlca, mpv, etc.
+protocol=$( echo "${1%%:*}" )
+
+# extract the actual url of the video, remaining part after the protocol
+url=$( echo "${1#*//}" )
+
+# detect which platform the script is running on
+if [[ "$( uname -a )" == *"buntu"* ]] ; then
+    # it's ubuntu (desktop)
+    case ${protocol} in
+        vlc) 
+            vlc -f "${url}"
+        ;;
+
+        vlca)
+            url=$( youtube-dl --get-url --format "bestaudio[ext!=webm]‌​" "${url}" )
+            vlc --qt-start-minimized "${url}"
+        ;;
+
+        mpv)
+            mpv --fs --ytdl-format="bestvideo[ext!=webm][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" "${url}"
+        ;;
+
+        *)
+            exit 1
+    esac
+else
+    # it's probably sailfish os
+    # TinyTinyRSS for some reason does not pass the url correctly,
+    # it passes https// instead of https:// (skips the colon)
+    # this needs to be corrected
+    if [[ "${url}" != *"://"* ]]; then
+        url=$( echo "${url}" | sed 's/\/\//:\/\//')
+    fi
+
+    if [[ ${protocol} == "vlca" ]]; then
+        # play audio only
+        url=$( youtube-dl --get-url --format "bestaudio[ext!=webm]" "${url}" )
+    else
+        # play video
+        url=$( youtube-dl --get-url --format "best[ext!=webm][height<=?720]" "${url}" )
+    fi
+
+    harbour-videoPlayer "${url}"
+fi

@@ -1,5 +1,0 @@
-#!/bin/bash
-
-url=$( echo "https://www.youtube.com/watch?v=${1##*=}" )
-
-harbour-videoPlayer $( youtube-dl --get-url --format "best[ext!=webm][height<=?720]" ${url} )

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-url=$( echo "https://www.youtube.com/watch?v=${1##*=}" )
-
-url=$( youtube-dl --get-url --format "bestaudio[ext!=webm]‌​" ${url} )
-
-vlc --qt-start-minimized ${url}

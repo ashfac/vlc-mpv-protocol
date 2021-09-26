@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=VLC/MPV Protocol Handler
+Comment=Open vlc:// , and vlca:// links with VLC Player, and mpv:// links with MPV Player
+Exec=vlc-mpv-protocol %u
+TryExec=vlc-mpv-protocol
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/vlc;x-scheme-handler/vlca;x-scheme-handler/mpv;
+NoDisplay=true
