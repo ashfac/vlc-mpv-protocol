@@ -7,7 +7,7 @@ protocol=$( echo "${1%%:*}" )
 url=$( echo "${1#*//}" )
 
 # detect which platform the script is running on
-if [[ "$( uname -a )" == *"buntu"* ]] ; then
+if echo "$( uname -a )" | grep -q "buntu"; then
     # it's ubuntu (desktop)
     case ${protocol} in
         vlc) 
@@ -29,9 +29,9 @@ if [[ "$( uname -a )" == *"buntu"* ]] ; then
 else
     # it's probably sailfish os
     # TinyTinyRSS for some reason does not pass the url correctly,
-    # it passes https// instead of https:// (skips the colon)
+    # it passes https// instead of https:// (skips the colon).
     # this needs to be corrected
-    if [[ "${url}" != *"://"* ]]; then
+    if ! echo "${url}" | grep -q "://"; then
         url=$( echo "${url}" | sed 's/\/\//:\/\//')
     fi
 

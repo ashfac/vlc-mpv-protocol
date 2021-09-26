@@ -1,11 +1,11 @@
 #!/bin/bash
 
-SAILFISH_IP=192.168.1.151
+SAILFISH_HOST=sailfish
 SAILFISH_USER=nemo
 
-scp vlc-mpv-protocol vlc-mpv-protocol.desktop ${SAILFISH_USER}@${SAILFISH_IP}:/tmp/
+scp vlc-mpv-protocol vlc-mpv-protocol.desktop ${SAILFISH_USER}@${SAILFISH_HOST}:/tmp/
 
-ssh -tt ${SAILFISH_USER}@${SAILFISH_IP} <<'ENDSSH'
+ssh -tt ${SAILFISH_USER}@${SAILFISH_HOST} <<'ENDSSH'
 
 cd /tmp
 
