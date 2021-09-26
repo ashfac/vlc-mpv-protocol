@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=LLS protocol
+Comment=Open vlc:// and mpv:// links with LLS Video Player on Sailfish OS.
+Exec=lls-protocol %u
+TryExec=lls-protocol
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/vlc;x-scheme-handler/mpv;
+NoDisplay=true
