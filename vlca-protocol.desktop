@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
-Name=VLC protocol
+Name=VLCA protocol
 Comment=Open vlca:// links with VLC Player.
 Exec=vlca-protocol %u
 TryExec=vlca-protocol
