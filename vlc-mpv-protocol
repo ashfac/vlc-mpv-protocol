@@ -20,7 +20,7 @@ if echo "$( uname -a )" | grep -q "buntu"; then
         ;;
 
         mpv)
-            mpv --fs --ytdl-format="bestvideo[ext!=webm][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" "${url}"
+            mpv --fs --ytdl-format="bestvideo[ext!=webm][vcodec^=avc1][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" "${url}"
         ;;
 
         *)
