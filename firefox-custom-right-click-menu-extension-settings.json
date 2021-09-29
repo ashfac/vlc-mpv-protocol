@@ -114,9 +114,9 @@
                 }
             ],
             "onContentTypes": [
+                false,
                 true,
-                true,
-                true,
+                false,
                 false,
                 false,
                 false
@@ -154,9 +154,9 @@
                 }
             ],
             "onContentTypes": [
+                false,
                 true,
-                true,
-                true,
+                false,
                 false,
                 false,
                 false
@@ -194,9 +194,9 @@
                 }
             ],
             "onContentTypes": [
+                false,
                 true,
-                true,
-                true,
+                false,
                 false,
                 false,
                 false
@@ -234,9 +234,9 @@
                 }
             ],
             "onContentTypes": [
+                false,
                 true,
-                true,
-                true,
+                false,
                 false,
                 false,
                 false
@@ -317,7 +317,7 @@
                         false,
                         false
                     ],
-                    "id": 11,
+                    "id": 8,
                     "expanded": false,
                     "path": [
                         0
@@ -362,7 +362,7 @@
                         false,
                         false
                     ],
-                    "id": 12,
+                    "id": 9,
                     "expanded": false,
                     "path": [
                         1
@@ -400,18 +400,21 @@
                         }
                     ],
                     "onContentTypes": [
+                        false,
                         true,
-                        true,
-                        true,
+                        false,
                         false,
                         false,
                         false
                     ],
-                    "id": 13,
+                    "id": 10,
                     "expanded": false,
                     "path": [
                         2
-                    ]
+                    ],
+                    "index": 2,
+                    "isPossibleAddLocation": false,
+                    "hiddenOnCrmType": false
                 },
                 {
                     "type": "script",
@@ -445,14 +448,14 @@
                         }
                     ],
                     "onContentTypes": [
+                        false,
                         true,
-                        true,
-                        true,
+                        false,
                         false,
                         false,
                         false
                     ],
-                    "id": 14,
+                    "id": 11,
                     "expanded": false,
                     "path": [
                         3
@@ -493,14 +496,14 @@
                         }
                     ],
                     "onContentTypes": [
+                        false,
                         true,
-                        true,
-                        true,
+                        false,
                         false,
                         false,
                         false
                     ],
-                    "id": 15,
+                    "id": 12,
                     "expanded": false,
                     "path": [
                         4
@@ -541,14 +544,14 @@
                         }
                     ],
                     "onContentTypes": [
+                        false,
                         true,
-                        true,
-                        true,
+                        false,
                         false,
                         false,
                         false
                     ],
-                    "id": 16,
+                    "id": 13,
                     "expanded": false,
                     "path": [
                         5
@@ -568,15 +571,15 @@
                 "theme": "dark",
                 "zoom": "100"
             },
-            "settingsLastUpdatedAt": 1632885746296,
-            "latestId": 11,
+            "settingsLastUpdatedAt": 1632925489370,
+            "latestId": 8,
             "rootName": "YouTube",
             "nodeStorageSync": {}
         },
         "settingsVersionData": {
             "current": {
-                "hash": "d7e7b1d90d77d2465a34043ba0391204",
-                "date": 1632885746301
+                "hash": "3eb799ed78aafa0bff1194e7bacec120",
+                "date": 1632925489373
             },
             "latest": {
                 "hash": "d531201256171a260193b43243212876",
@@ -603,8 +606,8 @@
             "theme": "dark",
             "zoom": "100"
         },
-        "settingsLastUpdatedAt": 1632885746296,
-        "latestId": 11,
+        "settingsLastUpdatedAt": 1632925489370,
+        "latestId": 8,
         "rootName": "YouTube",
         "nodeStorageSync": {}
     }
