@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=YouTube Video Downloader
+Comment=Open ytm4a:// , yt720:// , and yt1080:// links with youtube-dl
+Exec=vlc-mpv-protocol %u
+TryExec=vlc-mpv-protocol
+Terminal=true
+Type=Application
+MimeType=x-scheme-handler/ytm4a;x-scheme-handler/yt720;x-scheme-handler/yt1080;
+NoDisplay=false

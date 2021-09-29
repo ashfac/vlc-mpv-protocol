@@ -121,6 +121,126 @@
                 false,
                 false
             ]
+        },
+        {
+            "type": "script",
+            "name": "Download Video 1080p",
+            "value": {
+                "launchMode": 0,
+                "backgroundLibraries": [],
+                "libraries": [],
+                "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`yt1080://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                "backgroundScript": "",
+                "metaTags": {},
+                "options": {},
+                "ts": {
+                    "enabled": false,
+                    "backgroundScript": {},
+                    "script": {}
+                }
+            },
+            "nodeInfo": {
+                "permissions": [],
+                "installDate": "2021-09-28",
+                "lastUpdatedAt": 1632885462663,
+                "version": "1.0",
+                "isRoot": false,
+                "source": "local"
+            },
+            "triggers": [
+                {
+                    "url": "*://*.example.com/*",
+                    "not": false
+                }
+            ],
+            "onContentTypes": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "type": "script",
+            "name": "Download Video 720p",
+            "value": {
+                "launchMode": 0,
+                "backgroundLibraries": [],
+                "libraries": [],
+                "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`yt720://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                "backgroundScript": "",
+                "metaTags": {},
+                "options": {},
+                "ts": {
+                    "enabled": false,
+                    "backgroundScript": {},
+                    "script": {}
+                }
+            },
+            "nodeInfo": {
+                "permissions": [],
+                "installDate": "2021-09-28",
+                "lastUpdatedAt": 1632885513184,
+                "version": "1.0",
+                "isRoot": false,
+                "source": "local"
+            },
+            "triggers": [
+                {
+                    "url": "*://*.example.com/*",
+                    "not": false
+                }
+            ],
+            "onContentTypes": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "type": "script",
+            "name": "Download Audio",
+            "value": {
+                "launchMode": 0,
+                "backgroundLibraries": [],
+                "libraries": [],
+                "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`ytm4a://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                "backgroundScript": "",
+                "metaTags": {},
+                "options": {},
+                "ts": {
+                    "enabled": false,
+                    "backgroundScript": {},
+                    "script": {}
+                }
+            },
+            "nodeInfo": {
+                "permissions": [],
+                "installDate": "2021-09-28",
+                "lastUpdatedAt": 1632885538565,
+                "version": "1.0",
+                "isRoot": false,
+                "source": "local"
+            },
+            "triggers": [
+                {
+                    "url": "*://*.example.com/*",
+                    "not": false
+                }
+            ],
+            "onContentTypes": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
         }
     ],
     "local": {
@@ -197,7 +317,7 @@
                         false,
                         false
                     ],
-                    "id": 3,
+                    "id": 11,
                     "expanded": false,
                     "path": [
                         0
@@ -242,38 +362,15 @@
                         false,
                         false
                     ],
-                    "id": 4,
+                    "id": 12,
                     "expanded": false,
                     "path": [
                         1
                     ]
                 },
                 {
-                    "name": "Listen in VLC Player",
-                    "onContentTypes": [
-                        true,
-                        true,
-                        true,
-                        false,
-                        false,
-                        false
-                    ],
                     "type": "script",
-                    "isLocal": true,
-                    "nodeInfo": {
-                        "permissions": [],
-                        "installDate": "2021-09-26",
-                        "lastUpdatedAt": 1632666324448,
-                        "version": "1.0",
-                        "isRoot": false,
-                        "source": "local"
-                    },
-                    "triggers": [
-                        {
-                            "url": "*://*.example.com/*",
-                            "not": false
-                        }
-                    ],
+                    "name": "Listen in VLC Player",
                     "value": {
                         "launchMode": 0,
                         "backgroundLibraries": [],
@@ -288,12 +385,175 @@
                             "script": {}
                         }
                     },
-                    "id": 4,
+                    "nodeInfo": {
+                        "permissions": [],
+                        "installDate": "2021-09-26",
+                        "lastUpdatedAt": 1632666324448,
+                        "version": "1.0",
+                        "isRoot": false,
+                        "source": "local"
+                    },
+                    "triggers": [
+                        {
+                            "url": "*://*.example.com/*",
+                            "not": false
+                        }
+                    ],
+                    "onContentTypes": [
+                        true,
+                        true,
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "id": 13,
                     "expanded": false,
                     "path": [
                         2
+                    ]
+                },
+                {
+                    "type": "script",
+                    "name": "Download Video 1080p",
+                    "value": {
+                        "launchMode": 0,
+                        "backgroundLibraries": [],
+                        "libraries": [],
+                        "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`yt1080://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                        "backgroundScript": "",
+                        "metaTags": {},
+                        "options": {},
+                        "ts": {
+                            "enabled": false,
+                            "backgroundScript": {},
+                            "script": {}
+                        }
+                    },
+                    "nodeInfo": {
+                        "permissions": [],
+                        "installDate": "2021-09-28",
+                        "lastUpdatedAt": 1632885462663,
+                        "version": "1.0",
+                        "isRoot": false,
+                        "source": "local"
+                    },
+                    "triggers": [
+                        {
+                            "url": "*://*.example.com/*",
+                            "not": false
+                        }
                     ],
-                    "index": 2,
+                    "onContentTypes": [
+                        true,
+                        true,
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "id": 14,
+                    "expanded": false,
+                    "path": [
+                        3
+                    ],
+                    "index": 3,
+                    "isPossibleAddLocation": false,
+                    "hiddenOnCrmType": false
+                },
+                {
+                    "type": "script",
+                    "name": "Download Video 720p",
+                    "value": {
+                        "launchMode": 0,
+                        "backgroundLibraries": [],
+                        "libraries": [],
+                        "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`yt720://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                        "backgroundScript": "",
+                        "metaTags": {},
+                        "options": {},
+                        "ts": {
+                            "enabled": false,
+                            "backgroundScript": {},
+                            "script": {}
+                        }
+                    },
+                    "nodeInfo": {
+                        "permissions": [],
+                        "installDate": "2021-09-28",
+                        "lastUpdatedAt": 1632885513184,
+                        "version": "1.0",
+                        "isRoot": false,
+                        "source": "local"
+                    },
+                    "triggers": [
+                        {
+                            "url": "*://*.example.com/*",
+                            "not": false
+                        }
+                    ],
+                    "onContentTypes": [
+                        true,
+                        true,
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "id": 15,
+                    "expanded": false,
+                    "path": [
+                        4
+                    ],
+                    "index": 4,
+                    "isPossibleAddLocation": false,
+                    "hiddenOnCrmType": false
+                },
+                {
+                    "type": "script",
+                    "name": "Download Audio",
+                    "value": {
+                        "launchMode": 0,
+                        "backgroundLibraries": [],
+                        "libraries": [],
+                        "script": "function openInNewTab(href) {\n  Object.assign(document.createElement('a'), {\n    target: '_blank',\n    href: href,\n  }).click();\n}\n\nvar target = crmAPI.contextData.target; // Get the clicked element\nif (!target) { // Make sure it exists, if it doesn't, show an alert\n    alert('No target selected');\n    return;\n}\n\n// Find the closest link to what was clicked\nvar currentElement = target;\nwhile (currentElement && !currentElement.href) {\n    currentElement = currentElement.parentNode; \n}\n\n// If we selected a link, open the new URL with the\n// link target pasted in\nif (currentElement && currentElement.href) {\n    // Change the URL below to point to your preferred URL\n    openInNewTab(`ytm4a://${currentElement.href}`);\n} else {\n\t// If nothing was selected, show an alert\n    alert('Target is not a link!');\n}\n",
+                        "backgroundScript": "",
+                        "metaTags": {},
+                        "options": {},
+                        "ts": {
+                            "enabled": false,
+                            "backgroundScript": {},
+                            "script": {}
+                        }
+                    },
+                    "nodeInfo": {
+                        "permissions": [],
+                        "installDate": "2021-09-28",
+                        "lastUpdatedAt": 1632885538565,
+                        "version": "1.0",
+                        "isRoot": false,
+                        "source": "local"
+                    },
+                    "triggers": [
+                        {
+                            "url": "*://*.example.com/*",
+                            "not": false
+                        }
+                    ],
+                    "onContentTypes": [
+                        true,
+                        true,
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "id": 16,
+                    "expanded": false,
+                    "path": [
+                        5
+                    ],
+                    "index": 5,
                     "isPossibleAddLocation": false,
                     "hiddenOnCrmType": false
                 }
@@ -308,15 +568,15 @@
                 "theme": "dark",
                 "zoom": "100"
             },
-            "settingsLastUpdatedAt": 1632662027815,
-            "latestId": 4,
-            "rootName": "Custom Menu",
+            "settingsLastUpdatedAt": 1632885746296,
+            "latestId": 11,
+            "rootName": "YouTube",
             "nodeStorageSync": {}
         },
         "settingsVersionData": {
             "current": {
-                "hash": "a6780a905a67853b14b452726cf5ec10",
-                "date": 1632662027816
+                "hash": "d7e7b1d90d77d2465a34043ba0391204",
+                "date": 1632885746301
             },
             "latest": {
                 "hash": "d531201256171a260193b43243212876",
@@ -343,9 +603,9 @@
             "theme": "dark",
             "zoom": "100"
         },
-        "settingsLastUpdatedAt": 1632662027815,
-        "latestId": 4,
-        "rootName": "Custom Menu",
+        "settingsLastUpdatedAt": 1632885746296,
+        "latestId": 11,
+        "rootName": "YouTube",
         "nodeStorageSync": {}
     }
 }

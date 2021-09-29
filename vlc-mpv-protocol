@@ -10,17 +10,35 @@ url=$( echo "${1#*//}" )
 if echo "$( uname -a )" | grep -q "buntu"; then
     # it's ubuntu (desktop)
     case ${protocol} in
-        vlc) 
+        vlc)
+            # open video in VLC player
             vlc -f "${url}"
         ;;
 
         vlca)
+            # open audio only in VLC player
             url=$( youtube-dl --get-url --format "bestaudio[ext!=webm]‌​" "${url}" )
             vlc --qt-start-minimized "${url}"
         ;;
 
         mpv)
+            # open video in MPV player
             mpv --fs --ytdl-format="bestvideo[ext!=webm][vcodec^=avc1][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" "${url}"
+        ;;
+
+        ytm4a)
+            # download m4a audio with youtube-dl
+            youtube-dl --format "bestaudio[ext!=webm]" -o "~/Music/%(title)s.%(ext)s" "${url}"
+        ;;
+
+        yt720)
+            # download 720p mp4 video with youtube-dl
+            youtube-dl --format "bestvideo[ext!=webm][vcodec^=avc1][height<=?720]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" -o "~/Videos/%(title)s.720p.%(ext)s" "${url}"
+        ;;
+
+        yt1080)
+            # download 1080p mp4 video with youtube-dl
+            youtube-dl --format "bestvideo[ext!=webm][vcodec^=avc1][height<=?1080]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]" -o "~/Videos/%(title)s.1080p.%(ext)s" "${url}"
         ;;
 
         *)
