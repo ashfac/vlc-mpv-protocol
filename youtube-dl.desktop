@@ -7,4 +7,4 @@ TryExec=vlc-mpv-protocol
 Terminal=true
 Type=Application
 MimeType=x-scheme-handler/ytm4a;x-scheme-handler/yt720;x-scheme-handler/yt1080;
-NoDisplay=false
+NoDisplay=true
